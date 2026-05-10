@@ -11,9 +11,12 @@ const ProductCard = ({ product }) => {
       <p>Status: {product.inStock ? 'In Stock' : 'Out of Stock'}</p>
 
       {/* TODO: Implement Add to Cart button functionality */}
-      <button data-testid={'product-' + product.id}>Add to Cart</button>
+      <button data-testid={'product-' + product.id}>Add to Cart
+        onClick={() => addToCart(product.name)}
+        Add to Cart
+        </button>
     </div>
-  )
-}
+  );
+};
 
-export default ProductCard
+export default ProductCard;
