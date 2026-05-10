@@ -5,10 +5,16 @@ const Cart = () => {
     <div>
       <h2>Shopping Cart</h2>
       <ul>
-        {/* TODO: Include items here in li tags with text 'ITEM.NAME is in your cart.' */}
+        {useThemeProps.cartItems.map((item, index) => {
+          return (
+            <li key={index}>
+              {item} is in your Cart
+            </li>
+          );
+        })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;
